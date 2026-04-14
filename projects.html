@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Project portfolio page for YuTing Huang.">
+  <title>Projects | YuTing Huang</title>
+  <link rel="icon" type="image/svg+xml" href="assets/icons/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600&family=Nunito:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css">
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to content</a>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html">
+        <span class="brand-mark"><img src="photo.jpg" alt="YuTing Huang"></span>
+        <span class="brand-copy">
+          <strong>YuTing Huang</strong>
+          <span>AI and Bioinformatics Portfolio</span>
+        </span>
+      </a>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Toggle navigation">
+        <span></span>
+        <span></span>
+      </button>
+      <nav id="site-nav" class="site-nav" aria-label="Primary">
+        <a class="is-active" href="index.html">🏠Home</a>
+        <a href="about.html">🐱About Me</a>
+        <a href="skills.html">🧰Skills</a>
+        <a href="projects.html">💼Projects</a>
+        <a href="resume.html">📄Resume</a>
+        <a href="contact.html">📞Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <section class="page-topper">
+      <div class="container page-topper-inner" data-aos="fade-up">
+        <span class="eyebrow">Portfolio</span>
+        <h1>Project cards built around the exact required structure</h1>
+        <p>Each project below includes the required Problem, Data, Approach, Outcome, and Contribution sections from the assignment brief.</p>
+      </div>
+    </section>
+
+    <section class="section project-filter-section">
+      <div class="container">
+        <div class="filter-group" data-aos="fade-up">
+          <button class="filter-chip is-active" type="button" data-filter="all">All Projects</button>
+          <button class="filter-chip" type="button" data-filter="research">Research</button>
+          <button class="filter-chip" type="button" data-filter="development">Development</button>
+        </div>
+        <div class="project-stack">
+          <article class="project-card tilt-card" data-project-type="research" data-aos="fade-up" data-tilt-card>
+            <div class="project-card-top">
+              <div>
+                <span class="pill-label">Research</span>
+                <h2>Toxicity Prediction Using Graph Neural Networks</h2>
+              </div>
+              <span class="project-time">Aug 2024 - Sep 2025</span>
+            </div>
+            <div class="project-card-grid">
+              <div>
+                <h3>Problem</h3>
+                <p>The goal was to improve small-molecule toxicity prediction so that molecular screening could become both more accurate and more interpretable.</p>
+              </div>
+              <div>
+                <h3>Data</h3>
+                <p>Worked on public benchmark datasets containing molecular structures and toxicity labels. The modeling pipeline also incorporated atom-level features, functional group information, and fingerprint-style descriptors.</p>
+              </div>
+              <div>
+                <h3>Approach</h3>
+                <p>Built and evaluated multiple graph neural network architectures, then enhanced the models by integrating atom, functional group, and fingerprint features with functional group importance analysis.</p>
+              </div>
+              <div>
+                <h3>Outcome / Impact</h3>
+                <p>The project improved both model performance and interpretability across benchmark experiments, and supported one conference paper plus a follow-up journal manuscript under revision.</p>
+              </div>
+              <div class="full-span">
+                <h3>Your Contribution</h3>
+                <p>I designed and ran the model experiments, organized the feature pipeline, analyzed functional-group importance, and supported the writing and interpretation of the resulting research outputs.</p>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card tilt-card" data-project-type="research" data-aos="fade-up" data-tilt-card>
+            <div class="project-card-top">
+              <div>
+                <span class="pill-label alt">Research</span>
+                <h2>Microscopic Image Classification of Bacteria</h2>
+              </div>
+              <span class="project-time">Dec 2020 - Feb 2021</span>
+            </div>
+            <div class="project-card-grid">
+              <div>
+                <h3>Problem</h3>
+                <p>The project aimed to automate classification of microscopic bacterial images in order to reduce manual workload and improve classification efficiency.</p>
+              </div>
+              <div>
+                <h3>Data</h3>
+                <p>Used a labeled microscopic image dataset covering five bacteria categories. The main input was image-based visual data prepared for supervised CNN classification.</p>
+              </div>
+              <div>
+                <h3>Approach</h3>
+                <p>Designed and trained deep learning models in Python, wrote the model architectures, and tuned parameters and network settings to compare candidate CNN approaches.</p>
+              </div>
+              <div>
+                <h3>Outcome / Impact</h3>
+                <p>The final SE-ResNet-based model achieved over 98% accuracy across the five bacterial categories, showing strong potential for reliable automated image classification.</p>
+              </div>
+              <div class="full-span">
+                <h3>Your Contribution</h3>
+                <p>I was responsible for model design, training, parameter tuning, architecture comparison, and summarizing the final result that justified choosing SE-ResNet.</p>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card tilt-card" data-project-type="development" data-aos="fade-up" data-tilt-card>
+            <div class="project-card-top">
+              <div>
+                <span class="pill-label alt">Development</span>
+                <h2>Hemodialysis Health Education App</h2>
+              </div>
+              <span class="project-time">Dec 2019 - Dec 2020</span>
+            </div>
+            <div class="project-card-grid">
+              <div>
+                <h3>Problem</h3>
+                <p>The app was built to reduce the health education burden on clinicians and improve the quality of home-care education for patients and families.</p>
+              </div>
+              <div>
+                <h3>Data</h3>
+                <p>The project involved patient-education content, app-side database records, and clinical workflow requirements that shaped both the data structure and the system flow.</p>
+              </div>
+              <div>
+                <h3>Approach</h3>
+                <p>I participated in system analysis, database design, C# Windows-side development, Android mobile development, and the implementation of data transfer across the system.</p>
+              </div>
+              <div>
+                <h3>Outcome / Impact</h3>
+                <p>The app was launched in Tzu-Chi Hospital, and satisfaction from patients and doctors reached 4.8 / 5.0, showing practical value in a real care setting.</p>
+              </div>
+              <div class="full-span">
+                <h3>Your Contribution</h3>
+                <p>I worked across requirement research, function definition, database and app design, programming, and technical support so that the system could move from concept to hospital use.</p>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div>
+        <strong>Hello! You can call me -- Yumi.</strong>
+        <p>I hope we can become friends. 😊</p>
+      </div>
+      <div class="footer-links">
+        <a href="about.html">About</a>
+        <a href="projects.html">Projects</a>
+        <a href="resume.html">Resume</a>
+        <a href="contact.html">Contact</a>
+      </div>
+    </div>
+  </footer>
+
+  <script defer src="https://cdn.jsdelivr.net/npm/vanilla-tilt@1.8.1/dist/vanilla-tilt.min.js"></script>
+  <script defer src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script defer src="assets/js/main.js"></script>
+</body>
+</html>

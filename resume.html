@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Resume page for YuTing Huang.">
+  <title>Resume | YuTing Huang</title>
+  <link rel="icon" type="image/svg+xml" href="assets/icons/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600&family=Nunito:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css">
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to content</a>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html">
+        <span class="brand-mark"><img src="photo.jpg" alt="YuTing Huang"></span>
+        <span class="brand-copy">
+          <strong>YuTing Huang</strong>
+          <span>AI and Bioinformatics Portfolio</span>
+        </span>
+      </a>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Toggle navigation">
+        <span></span>
+        <span></span>
+      </button>
+      <nav id="site-nav" class="site-nav" aria-label="Primary">
+        <a class="is-active" href="index.html">🏠Home</a>
+        <a href="about.html">🐱About Me</a>
+        <a href="skills.html">🧰Skills</a>
+        <a href="projects.html">💼Projects</a>
+        <a href="resume.html">📄Resume</a>
+        <a href="contact.html">📞Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <section class="page-topper">
+      <div class="container page-topper-inner" data-aos="fade-up">
+        <span class="eyebrow">Resume / CV</span>
+        <h1>A short CV section based on my current resume</h1>
+        <p>This page provides a viewable summary of education, experience, projects, and achievements without copying the original PDF into the website folder.</p>
+        <button class="button button-primary print-trigger" type="button">Print / Save as PDF</button>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <article class="resume-summary-card" data-aos="fade-up">
+          <div>
+            <span class="eyebrow">Profile Summary</span>
+            <h2>YuTing Huang</h2>
+            <p>Master's student in Artificial Intelligence and Business Analytics with a prior medical informatics background and research experience in graph neural networks, CNN-based image classification, and healthcare application development.</p>
+          </div>
+          <div class="summary-chip-group">
+            <span>Machine Learning</span>
+            <span>Bioinformatics</span>
+            <span>Healthcare AI</span>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section soft-section">
+      <div class="container resume-grid">
+        <article class="panel-card" data-aos="fade-up">
+          <span class="eyebrow">Education</span>
+          <h2>Academic Background</h2>
+          <div class="timeline">
+            <div class="timeline-item">
+              <div class="timeline-dot"></div>
+              <div>
+                <h3>Lingnan University (Hong Kong)</h3>
+                <p>Master in Artificial Intelligence and Business Analytics</p>
+                <span>Sep 2025 - Present | GPA 3.87 / 4.00</span>
+              </div>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-dot"></div>
+              <div>
+                <h3>Tzu Chi University</h3>
+                <p>Master of Science in Medical Informatics</p>
+                <span>GPA 4.00 / 4.00 | Top 1 in the department</span>
+              </div>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-dot"></div>
+              <div>
+                <h3>Tzu Chi University</h3>
+                <p>Bachelor of Science in Medical Informatics</p>
+                <span>GPA 3.68 / 4.00 | Top 5 in the department</span>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="panel-card" data-aos="fade-up" data-aos-delay="80">
+          <span class="eyebrow">Experience</span>
+          <h2>Selected Experience</h2>
+          <div class="timeline">
+            <div class="timeline-item">
+              <div class="timeline-dot"></div>
+              <div>
+                <h3>Research Assistant | Hong Kong Metropolitan University</h3>
+                <span>Apr 2024 - Present</span>
+                <p>Focus on deep learning methods for bioinformatics, including small-molecule toxicity prediction through data collection, cleaning, and model design.</p>
+              </div>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-dot"></div>
+              <div>
+                <h3>Programmer | Tzu Chi Hospital</h3>
+                <span>Dec 2019 - Feb 2022</span>
+                <p>Contributed to the hemodialysis health education app, diabetic foot wound classification work, requirement research, coding, and technical support.</p>
+              </div>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-dot"></div>
+              <div>
+                <h3>Website Maintainer and Teaching Assistant | Tzu Chi University</h3>
+                <span>Sep 2021 - Present</span>
+                <p>Independently maintained department website content and supported teaching by answering questions, giving guidance, and reporting student issues back to teachers.</p>
+              </div>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container split-layout">
+        <article class="panel-card" data-aos="fade-up">
+          <span class="eyebrow">Selected Projects</span>
+          <h2>Resume-friendly highlights</h2>
+          <ul class="bullet-list">
+            <li><strong>Toxicity Prediction Using Graph Neural Networks:</strong> Built multi-feature GNN pipelines for toxicity prediction and interpretability analysis on public benchmarks.</li>
+            <li><strong>Microscopic Image Classification of Bacteria:</strong> Designed and tuned CNN models and achieved over 98% accuracy with SE-ResNet.</li>
+            <li><strong>Hemodialysis Health Education App:</strong> Participated in requirement analysis, database design, programming, and hospital-side deployment support.</li>
+          </ul>
+        </article>
+        <article class="panel-card dotted-card" data-aos="fade-up" data-aos-delay="80">
+          <span class="eyebrow">Achievements</span>
+          <h2>Quick strengths snapshot</h2>
+          <div class="role-chip-group">
+            <span>4 Publications</span>
+            <span>ICMLC 2024</span>
+            <span>AI-900</span>
+            <span>Outstanding Graduate</span>
+            <span>Outstanding Youth</span>
+            <span>Mandarin / English / Cantonese / Taiwanese</span>
+          </div>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div>
+        <strong>Hello! You can call me -- Yumi.</strong>
+        <p>I hope we can become friends. 😊</p>
+      </div>
+      <div class="footer-links">
+        <a href="about.html">About</a>
+        <a href="projects.html">Projects</a>
+        <a href="resume.html">Resume</a>
+        <a href="contact.html">Contact</a>
+      </div>
+    </div>
+  </footer>
+
+  <script defer src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script defer src="assets/js/main.js"></script>
+</body>
+</html>
