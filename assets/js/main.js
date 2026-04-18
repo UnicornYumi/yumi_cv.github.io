@@ -61,6 +61,18 @@ function initAOS() {
     offset: 40,
     easing: "ease-out-cubic"
   });
+
+  window.addEventListener("load", () => {
+    AOS.refreshHard();
+  });
+
+  document.querySelectorAll("img").forEach((image) => {
+    if (!image.complete) {
+      image.addEventListener("load", () => {
+        AOS.refresh();
+      }, { once: true });
+    }
+  });
 }
 
 function initTilt() {
@@ -95,7 +107,17 @@ function initProjectFilters() {
       cards.forEach((card) => {
         const match = selected === "all" || card.dataset.projectType === selected;
         card.classList.toggle("is-hidden", !match);
+
+        if (match && card.hasAttribute("data-aos")) {
+          card.classList.add("aos-animate");
+        }
       });
+
+      if (typeof AOS !== "undefined") {
+        window.requestAnimationFrame(() => {
+          AOS.refreshHard();
+        });
+      }
     });
   });
 }
