@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Skills page for YuTing Huang covering technical, applied, and tool skills.">
+  <meta name="description" content="Skills page for YuTing Huang covering technical, applied, and business skills.">
   <title>Skills | YuTing Huang</title>
   <link rel="icon" type="image/svg+xml" href="assets/icons/favicon.svg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -12,8 +12,10 @@
   <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css">
   <link rel="stylesheet" href="assets/css/styles.css">
 </head>
+
 <body>
   <a class="skip-link" href="#main-content">Skip to content</a>
+
   <header class="site-header">
     <div class="container header-inner">
       <a class="brand" href="index.html">
@@ -23,14 +25,16 @@
           <span>AI and Bioinformatics Portfolio</span>
         </span>
       </a>
+
       <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Toggle navigation">
         <span></span>
         <span></span>
       </button>
+
       <nav id="site-nav" class="site-nav" aria-label="Primary">
-        <a class="is-active" href="index.html">🏠Home</a>
+        <a href="index.html">🏠Home</a>
         <a href="about.html">🐱About Me</a>
-        <a href="skills.html">🧰Skills</a>
+        <a class="is-active" href="skills.html">🧰Skills</a>
         <a href="projects.html">💼Projects</a>
         <a href="resume.html">📄Resume</a>
         <a href="contact.html">📞Contact</a>
@@ -39,99 +43,120 @@
   </header>
 
   <main id="main-content">
-    <section class="page-topper">
-      <div class="container page-topper-inner" data-aos="fade-up">
-        <span class="eyebrow">Skills</span>
-        <h1>Technical, applied, and tool skills aligned with my academic and project work</h1>
-        <p>This page organizes my skills in a way that connects directly to the research and development experience shown in my portfolio.</p>
-      </div>
-    </section>
 
+    <!-- Skills Overview -->
     <section class="section">
       <div class="container">
         <div class="section-head" data-aos="fade-up">
-          <span class="eyebrow">Technical Skills</span>
-          <h2>Core technical toolkit</h2>
-          <p>The levels below are a simple visual summary of the skills I use most often in projects and research.</p>
+          <span class="eyebrow" style="margin-bottom: 1rem;">Skills Overview</span>
+          <h2>Core technical and toolkit</h2>
         </div>
-        <div class="skill-grid">
-          <article class="skill-card" data-aos="fade-up" data-aos-delay="40">
-            <div class="skill-head">
-              <h3>Python</h3>
-              <span>92%</span>
+
+        <div class="skill-category-grid">
+
+        <!-- Technical Skills -->
+        <article class="skill-category-card" data-aos="fade-up" data-aos-delay="40">
+          <div class="skill-category-head">
+            <span class="eyebrow">Technical Skills</span>
+            <h3>Technical Skill Set</h3>
+            <p>
+              Tools and methods I use for data processing, model development,
+              experiment design, and technical implementation.
+            </p>
+          </div>
+
+          <div class="skill-block">
+            <h4>Programming & Data</h4>
+            <div class="skill-tag-group">
+              <span>Python</span>
+              <span>SQL</span>
+              <span>HTML</span>
+              <span>Data Cleaning</span>
+              <span>Database Systems</span>
             </div>
-            <p>Model prototyping, data processing, training workflows, and experimentation for research and applied projects.</p>
-            <div class="skill-bar"><span style="width: 92%;"></span></div>
-          </article>
-          <article class="skill-card" data-aos="fade-up" data-aos-delay="80">
-            <div class="skill-head">
-              <h3>SQL and Database Systems</h3>
-              <span>82%</span>
+          </div>
+
+          <div class="skill-block">
+            <h4>Machine Learning & AI</h4>
+            <div class="skill-tag-group">
+              <span>Machine Learning</span>
+              <span>Deep Learning</span>
+              <span>Graph Neural Networks</span>
+              <span>CNN</span>
+              <span>Natural Language Processing</span>
             </div>
-            <p>Database querying, data processing, requirement-driven database design, and healthcare information system support.</p>
-            <div class="skill-bar"><span style="width: 82%;"></span></div>
-          </article>
-          <article class="skill-card" data-aos="fade-up" data-aos-delay="120">
-            <div class="skill-head">
-              <h3>Deep Learning (CNN / GNN)</h3>
-              <span>90%</span>
+          </div>
+
+          <div class="skill-block">
+            <h4>Analysis & Visualization</h4>
+            <div class="skill-tag-group">
+              <span>Statistics</span>
+              <span>Model Evaluation</span>
+              <span>Data Visualization</span>
+              <span>Experiment Analysis</span>
             </div>
-            <p>Designing and tuning neural architectures for molecular toxicity prediction and microscopic image classification.</p>
-            <div class="skill-bar"><span style="width: 90%;"></span></div>
-          </article>
-          <article class="skill-card" data-aos="fade-up" data-aos-delay="160">
-            <div class="skill-head">
-              <h3>Web and App Development</h3>
-              <span>74%</span>
+          </div>
+        </article>
+
+        <!-- Business Skills -->
+        <article class="skill-category-card" data-aos="fade-up" data-aos-delay="90">
+          <div class="skill-category-head">
+            <span class="eyebrow">Business Skills</span>
+            <h3>Business and Analytical Skill Set</h3>
+            <p>
+              Skills I use to translate technical work into structured problems,
+              clear reports, and decision-oriented outputs.
+            </p>
+          </div>
+
+          <div class="skill-block">
+            <h4>Problem Understanding</h4>
+            <div class="skill-tag-group">
+              <span>Problem Framing</span>
+              <span>Requirement Analysis</span>
+              <span>System Thinking</span>
+              <span>User Needs Analysis</span>
             </div>
-            <p>HTML, C, and C#-related implementation experience, plus practical involvement in Windows and Android-oriented systems.</p>
-            <div class="skill-bar"><span style="width: 74%;"></span></div>
-          </article>
-        </div>
+          </div>
+
+          <div class="skill-block">
+            <h4>Decision & Evaluation</h4>
+            <div class="skill-tag-group">
+              <span>Metric Design</span>
+              <span>Performance Evaluation</span>
+              <span>Result Interpretation</span>
+            </div>
+          </div>
+
+          <div class="skill-block">
+            <h4>Communication</h4>
+            <div class="skill-tag-group">
+              <span>Reporting</span>
+              <span>Data Storytelling</span>
+              <span>Presentation</span>
+              <span>Cross-functional Communication</span>
+            </div>
+          </div>
+        </article>
+
+      </div>
+
       </div>
     </section>
 
-    <section class="section soft-section">
-      <div class="container">
-        <div class="section-head" data-aos="fade-up">
-          <span class="eyebrow">Applied Skills</span>
-          <h2>How I work with people, requirements, and outputs</h2>
-          <p>These are the supporting skills that help technical work become something useful for collaborators, clinicians, or researchers.</p>
-        </div>
-        <div class="two-col-grid">
-          <article class="info-card" data-aos="fade-up" data-aos-delay="40">
-            <h3>Requirement analysis and system thinking</h3>
-            <p>I am comfortable understanding user needs, clarifying system functions, and translating problem statements into concrete tasks.</p>
-          </article>
-          <article class="info-card" data-aos="fade-up" data-aos-delay="80">
-            <h3>Data collection and organization</h3>
-            <p>My research assistant work has involved collecting, cleaning, structuring, and documenting data for dependable downstream use.</p>
-          </article>
-          <article class="info-card" data-aos="fade-up" data-aos-delay="120">
-            <h3>Research reporting and presentation</h3>
-            <p>I have experience summarizing experiments, supporting papers, and presenting technical results in a structured and readable way.</p>
-          </article>
-          <article class="info-card" data-aos="fade-up" data-aos-delay="160">
-            <h3>Teaching and technical support</h3>
-            <p>Teaching assistance, website maintenance, and hospital-side support work strengthened my patience, follow-through, and communication style.</p>
-          </article>
-        </div>
-      </div>
-    </section>
-
+    <!-- Tools -->
     <section class="section">
       <div class="container">
         <div class="section-head" data-aos="fade-up">
-          <span class="eyebrow">Tools</span>
-          <h2>Frameworks, software, and languages I use most often</h2>
+          <span class="eyebrow" style="margin-bottom: 1rem;">Tools</span>
+          <h2>Frameworks & Software</h2>
         </div>
+
         <div class="tool-cloud" data-aos="fade-up" data-aos-delay="60">
-          <span>Python</span>
-          <span>SQL</span>
-          <span>C</span>
-          <span>HTML</span>
           <span>TensorFlow</span>
           <span>Keras</span>
+          <span>Pandas</span>
+          <span>Power BI</span>
           <span>SQL Server</span>
           <span>Visual Studio</span>
           <span>VS Code</span>
@@ -139,29 +164,6 @@
       </div>
     </section>
 
-    <section class="section">
-      <div class="container split-layout">
-        <article class="panel-card" data-aos="fade-up">
-          <span class="eyebrow">Skill-to-Project Mapping</span>
-          <h2>How these skills appear in my work</h2>
-          <ul class="bullet-list">
-            <li><strong>Toxicity prediction research:</strong> GNNs, feature integration, model evaluation, experiment analysis.</li>
-            <li><strong>Bacteria image classification:</strong> CNN design, architecture tuning, Python-based training workflows.</li>
-            <li><strong>Health education app:</strong> requirement analysis, database design, C# development, deployment support.</li>
-          </ul>
-        </article>
-        <article class="panel-card dotted-card" data-aos="fade-up" data-aos-delay="80">
-          <span class="eyebrow">Target Alignment</span>
-          <h2>Roles this profile best fits</h2>
-          <div class="role-chip-group">
-            <span>Machine Learning Intern</span>
-            <span>AI Research Intern</span>
-            <span>Bioinformatics Intern</span>
-            <span>Data Analyst Intern</span>
-          </div>
-        </article>
-      </div>
-    </section>
   </main>
 
   <footer class="site-footer">
@@ -170,6 +172,7 @@
         <strong>Hello! You can call me -- Yumi.</strong>
         <p>I hope we can become friends. 😊</p>
       </div>
+
       <div class="footer-links">
         <a href="about.html">About</a>
         <a href="projects.html">Projects</a>

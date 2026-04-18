@@ -11,6 +11,24 @@
   <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600&family=Nunito:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css">
   <link rel="stylesheet" href="assets/css/styles.css">
+  <style>
+    .project-visual {
+      margin: 1rem 0 1.1rem;
+      overflow: hidden;
+      border: 1px solid var(--line);
+      border-radius: 22px;
+      background: rgba(255, 255, 255, 0.75);
+      box-shadow: 0 14px 34px rgba(20, 58, 114, 0.11);
+    }
+
+    .project-visual img {
+      display: block;
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      object-fit: cover;
+    }
+
+  </style>
 </head>
 <body>
   <a class="skip-link" href="#main-content">Skip to content</a>
@@ -28,10 +46,10 @@
         <span></span>
       </button>
       <nav id="site-nav" class="site-nav" aria-label="Primary">
-        <a class="is-active" href="index.html">🏠Home</a>
+        <a href="index.html">🏠Home</a>
         <a href="about.html">🐱About Me</a>
         <a href="skills.html">🧰Skills</a>
-        <a href="projects.html">💼Projects</a>
+        <a class="is-active" href="projects.html">💼Projects</a>
         <a href="resume.html">📄Resume</a>
         <a href="contact.html">📞Contact</a>
       </nav>
@@ -42,8 +60,8 @@
     <section class="page-topper">
       <div class="container page-topper-inner" data-aos="fade-up">
         <span class="eyebrow">Portfolio</span>
-        <h1>Project Section</h1>
-        <p>You can visit this page to learn about the projects I've worked on.</p>
+        <h1>Projects</h1>
+        <p>A focused overview of my personal and team projects across AI, computer vision, reinforcement learning, immersive systems, and digital health.</p>
       </div>
     </section>
 
@@ -51,18 +69,302 @@
       <div class="container">
         <div class="filter-group" data-aos="fade-up">
           <button class="filter-chip is-active" type="button" data-filter="all">All Projects</button>
-          <button class="filter-chip" type="button" data-filter="research">Research</button>
-          <button class="filter-chip" type="button" data-filter="development">Development</button>
+          <button class="filter-chip" type="button" data-filter="personal">Personal Projects</button>
+          <button class="filter-chip" type="button" data-filter="group">Group Projects</button>
+          <button class="filter-chip" type="button" data-filter="others">Others</button>
         </div>
         <div class="project-stack">
-          <article class="project-card tilt-card" data-project-type="research" data-aos="fade-up" data-tilt-card>
+          <article class="project-card tilt-card" data-project-type="personal" data-aos="fade-up" data-tilt-card>
             <div class="project-card-top">
               <div>
-                <span class="pill-label">Research</span>
+                <span class="pill-label">Personal Project</span>
+                <h2>Bunny Carrot Maze Based on Q-Learning</h2>
+              </div>
+              <span class="project-time">Mar 2026</span>
+            </div>
+            <figure class="project-visual">
+              <img loading="lazy" src="assets/img/projects/bunny-maze.jpg" alt="Bunny Carrot Maze game UI screenshot">
+            </figure>
+            <div class="project-card-grid">
+              <div>
+                <h3>Problem</h3>
+                <p>Built a reinforcement-learning maze game where a bunny must collect a carrot before reaching the exit while avoiding traps and managing HP. The main challenge was delayed reward learning in mazes with different levels of long-horizon difficulty.</p>
+              </div>
+              <div>
+                <h3>Data</h3>
+                <p>The environment uses procedurally generated grid mazes with randomized walls, carrot, exit, poison traps, and medkits. I evaluated the agent on three generated maps using win rate, reward, training logs, and step count.</p>
+              </div>
+              <div>
+                <h3>Approach</h3>
+                <p>Implemented a Python and Pygame environment plus a tabular Q-learning agent with epsilon-greedy exploration, Q-table updates, and state encoding for position, key status, HP, target direction, nearby walls, and nearby traps.</p>
+              </div>
+              <div>
+                <h3>Outcome / Impact</h3>
+                <p>The agent reached 100% final win rate on Map 1 and Map 2 and reduced solution steps from more than 199 to about 23-24. Map 3 exposed the limitation of tabular Q-learning on longer and more complex maze topology.</p>
+              </div>
+              <div class="full-span">
+                <h3>My Contribution</h3>
+                <p>Sole author and developer. I designed the game mechanics, UI, maze generation, reward logic, Q-learning agent, experiments, and analysis of success and failure cases.</p>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card tilt-card" data-project-type="personal" data-aos="fade-up" data-tilt-card>
+            <div class="project-card-top">
+              <div>
+                <span class="pill-label alt">Personal Project</span>
+                <h2>Deep Learning Experiments on Skin Cancer Classification</h2>
+              </div>
+              <span class="project-time">Mar 2026</span>
+            </div>
+            <figure class="project-visual">
+              <img loading="lazy" src="assets/img/projects/skin-cancer.jpg" alt="Skin cancer classification model and training results">
+            </figure>
+            <div class="project-card-grid">
+              <div>
+                <h3>Problem</h3>
+                <p>Investigated how to improve nine-class skin lesion classification under small, noisy, and highly imbalanced medical image data. The project tested whether data cleaning, minority-class augmentation, and channel attention could improve performance and stability.</p>
+              </div>
+              <div>
+                <h3>Data</h3>
+                <p>Used the ISIC Skin Cancer dataset from Kaggle, with 2,357 dermatoscopic images across nine diagnostic categories. The original split included 2,239 training images and 118 test images, followed by duplicate inspection, resizing to 200 x 200, grayscale conversion, and normalization.</p>
+              </div>
+              <div>
+                <h3>Approach</h3>
+                <p>Compared original data, all-class augmentation, and minority-class targeted augmentation using a four-layer CNN baseline. Then trained ResNet50 and SE-ResNet50 with Adam, categorical cross-entropy, early stopping, and image transformations.</p>
+              </div>
+              <div>
+                <h3>Outcome / Impact</h3>
+                <p>Minority-class targeted augmentation achieved the best CNN baseline accuracy at 0.36780. SE-ResNet50 slightly outperformed ResNet50 in accuracy and AUC while showing more stable convergence.</p>
+              </div>
+              <div class="full-span">
+                <h3>My Contribution</h3>
+                <p>Sole author. I completed dataset inspection and cleaning, preprocessing, augmentation design, CNN and ResNet experiments, metric comparison, and written analysis.</p>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card tilt-card" data-project-type="group" data-aos="fade-up" data-tilt-card>
+            <div class="project-card-top">
+              <div>
+                <span class="pill-label">Group Project</span>
+                <h2>EVA-Muse: AI-Powered Interactive 3D Inquiry</h2>
+              </div>
+              <span class="project-time">Mar 2026</span>
+            </div>
+            <figure class="project-visual">
+              <img loading="lazy" src="assets/img/projects/eva-muse.jpg" alt="EVA-Muse interactive 3D learning world slide">
+            </figure>
+            <div class="project-card-grid">
+              <div>
+                <h3>Problem</h3>
+                <p>Museums attract visitors but often cannot measure whether visitors actually learned. Existing audio and AI guides focus on narration rather than collecting evidence, diagnosing misconceptions, or reporting learning gains.</p>
+              </div>
+              <div>
+                <h3>Data</h3>
+                <p>The project is designed around museum learning-interaction data, including artifact observations, collected clues, student explanations, quizzes, check-ins, completion status, misconception signals, and cohort-level learning reports.</p>
+              </div>
+              <div>
+                <h3>Approach</h3>
+                <p>Designed an inquiry workflow where students observe 3D artifacts, reason with AI prompts, and explain conclusions through evidence chains. The concept combines 3D museum scenes, clue hunting, missions, badges, a text-to-3D pipeline, multi-agent support, and a learning data loop.</p>
+              </div>
+              <div>
+                <h3>Outcome / Impact</h3>
+                <p>Produced a B2B-first museum education SaaS concept with content-production and per-student deployment revenue streams. The value is shifting digital museum learning from passive storytelling to measurable inquiry-based diagnostics.</p>
+              </div>
+              <div class="full-span">
+                <h3>My Contribution</h3>
+                <p>Contributed to the product concept, inquiry-learning flow, 3D and AI feature architecture, business model, and pilot narrative. This contribution can be adjusted if a more exact team division is needed.</p>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card tilt-card" data-project-type="group" data-aos="fade-up" data-tilt-card>
+            <div class="project-card-top">
+              <div>
+                <span class="pill-label alt">Group Project</span>
+                <h2>Virtual Reality-Based Interview Training Tool</h2>
+              </div>
+              <span class="project-time">Feb 2026 - May 2026</span>
+            </div>
+            <figure class="project-visual">
+              <img loading="lazy" src="assets/img/projects/eva-interview.jpg" alt="VR interview training system pipeline framework">
+            </figure>
+            <div class="project-card-grid">
+              <div>
+                <h3>Problem</h3>
+                <p>Interview simulators often generate natural conversation but fail to reduce the sim-to-real gap because they lack voice-first pressure, structured interviewer control, and recruiter-aligned assessment.</p>
+              </div>
+              <div>
+                <h3>Data</h3>
+                <p>Used RecruitView, a multimodal interview assessment dataset with 2,011 response clips, 331 sessions, and 76 standardized interview questions. Answers are relabeled into STAR evidence units with A-F STAR-dimension grades and indicator scores.</p>
+              </div>
+              <div>
+                <h3>Approach</h3>
+                <p>Designed a 3D/VR interview environment with an embodied avatar and a closed-loop STT -> LLM interviewer -> TTS speech pipeline. The system uses constrained LLM prompting for STAR checking and a LoRA-tuned Qwen2.5-1.5B discrete STAR grader.</p>
+              </div>
+              <div>
+                <h3>Outcome / Impact</h3>
+                <p>Built an end-to-end system design and prototype plan covering voice interaction, interview control, STAR output structure, rubric-aligned evaluation, and user study protocol.</p>
+              </div>
+              <div class="full-span">
+                <h3>My Contribution</h3>
+                <p>Contributed to the STAR-guided interaction and evaluation design, including prompt and rubric specification, STAR annotation logic, and report/demo preparation.</p>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card tilt-card" data-project-type="group" data-aos="fade-up" data-tilt-card>
+            <div class="project-card-top">
+              <div>
+                <span class="pill-label">Group Project</span>
+                <h2>EvaMate: Personalized Fire Evacuation Assistant</h2>
+              </div>
+              <span class="project-time">Apr 2026</span>
+            </div>
+            <figure class="project-visual">
+              <img loading="lazy" src="assets/img/projects/evamate.jpg" alt="EvaMate system architecture diagram">
+            </figure>
+            <div class="project-card-grid">
+              <div>
+                <h3>Problem</h3>
+                <p>Traditional fire alarms notify residents that something is wrong but do not provide personalized, situation-aware evacuation guidance. The project focused on the first critical decision after an alarm: which route is safest for each person.</p>
+              </div>
+              <div>
+                <h3>Data</h3>
+                <p>The system concept uses real-time IoT fire-safety data, including multi-sensor fire signals, high-definition imaging, user location, fire source, risk zones, smoke spread, building layout, and assistance information.</p>
+              </div>
+              <div>
+                <h3>Approach</h3>
+                <p>Proposed a real-time perception -> digital twin -> AI path planning -> multi-terminal guidance architecture. The system combines distributed sensing, digital building state estimation, personalized route planning, and voice, vibration, and visual alerts.</p>
+              </div>
+              <div>
+                <h3>Outcome / Impact</h3>
+                <p>Produced a competition pitch for an individual-level smart fire-safety assistant. The deck positioned EvaMate around evacuation-time reduction, casualty reduction, fire-incidence reduction, and rescue-efficiency improvement.</p>
+              </div>
+              <div class="full-span">
+                <h3>My Contribution</h3>
+                <p>Served as Product Manager. I defined product positioning, user scenarios, feature requirements, evacuation-guidance workflow, impact narrative, and presentation structure.</p>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card tilt-card" data-project-type="group" data-aos="fade-up" data-tilt-card>
+            <div class="project-card-top">
+              <div>
+                <span class="pill-label alt">Group Project</span>
+                <h2>EVA_Momenta: Physics-Grounded Visual Language Navigation</h2>
+              </div>
+              <span class="project-time">Apr 2026</span>
+            </div>
+            <figure class="project-visual">
+              <img loading="lazy" src="assets/img/projects/eva-momenta.jpg" alt="EVA_Momenta physics-grounded navigation framework">
+            </figure>
+            <div class="project-card-grid">
+              <div>
+                <h3>Problem</h3>
+                <p>Vision-language navigation systems can choose semantically plausible targets but still fail local physical judgment, such as unsafe moves, occluded geometry, or uncertain boundaries.</p>
+              </div>
+              <div>
+                <h3>Data</h3>
+                <p>Used a structured scene-generation pipeline built from room specifications, object assets, layout constraints, and navigation supervision. The system renders RGB, depth, stereo observations, and simulation traces across indoor scenes using MuJoCo and Isaac Sim style backends.</p>
+              </div>
+              <div>
+                <h3>Approach</h3>
+                <p>Adapted a Qwen3-VL 2B instruction model into a compact navigation controller with FORWARD, LEFT, and RIGHT actions using QLoRA fine-tuning. Added FFSP perception-to-physics components, including stereo reconstruction, SAM tracking, 6D state estimation, Newton-style rollout, and collision-aware filtering.</p>
+              </div>
+              <div>
+                <h3>Outcome / Impact</h3>
+                <p>Fine-tuning improved success rates from 0.05 to 0.65 on real-scan and from 0.13 to 0.82 in simulation. The FFSP-enhanced version further reached 0.83 and 0.87, showing the value of explicit physical judgment.</p>
+              </div>
+              <div class="full-span">
+                <h3>My Contribution</h3>
+                <p>Responsible for the Backbone Training part: compact Qwen3-VL navigation interface, training-corpus design, QLoRA adaptation, fine-tuning validation, and analysis of semantic controller gains before FFSP.</p>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card tilt-card" data-project-type="group" data-aos="fade-up" data-tilt-card>
+            <div class="project-card-top">
+              <div>
+                <span class="pill-label">Group Project</span>
+                <h2>Controllability Versus Robustness in Flower Recognition</h2>
+              </div>
+              <span class="project-time">Mar 2026</span>
+            </div>
+            <figure class="project-visual">
+              <img loading="lazy" src="assets/img/projects/flower-recognition.jpg" alt="Flower recognition white-box and black-box pipeline overview">
+            </figure>
+            <div class="project-card-grid">
+              <div>
+                <h3>Problem</h3>
+                <p>Studied whether a controllable white-box flower classifier can remain competitive with black-box neural networks while staying robust under adversarial perturbations. The focus was the tradeoff between auditability and robustness.</p>
+              </div>
+              <div>
+                <h3>Data</h3>
+                <p>Used the Kaggle/TensorFlow flower benchmark with five classes. The official split included 3,540 training images, 80 validation images, and 50 balanced test images; after duplicate removal, 3,616 development images were used.</p>
+              </div>
+              <div>
+                <h3>Approach</h3>
+                <p>Built explicit white-box representations using HOG, HSV color histograms, LBP texture, global statistics, masks, crops, and semantic flower-aware features. Compared Logistic Regression, SVMs, Random Forest, VGG16, and ResNet18 under a shared Square Attack.</p>
+              </div>
+              <div>
+                <h3>Outcome / Impact</h3>
+                <p>The semantic Random Forest reached 0.680 clean accuracy, matching VGG16 and approaching ResNet18 at 0.700. Under attack, it dropped to 0.320 while VGG16 and ResNet18 stayed at 0.640 and 0.660.</p>
+              </div>
+              <div class="full-span">
+                <h3>My Contribution</h3>
+                <p>Responsible for research and experiments on neural network methods, including the VGG16 and ResNet18 comparison side used to benchmark the white-box pipeline.</p>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card tilt-card" data-project-type="group" data-aos="fade-up" data-tilt-card>
+            <div class="project-card-top">
+              <div>
+                <span class="pill-label alt">Group Project</span>
+                <h2>Center-Aware Dataset Distillation for MNIST-Family Classification</h2>
+              </div>
+              <span class="project-time">Apr 2026</span>
+            </div>
+            <figure class="project-visual">
+              <img loading="lazy" src="assets/img/projects/mnist-distillation.jpg" alt="Center-aware MNIST-family dataset distillation teaser">
+            </figure>
+            <div class="project-card-grid">
+              <div>
+                <h3>Problem</h3>
+                <p>Studied how to compress multiple visually related but semantically mismatched MNIST-family domains into a compact synthetic training set. The challenge was preserving cross-domain structure under a shared 10-class index space.</p>
+              </div>
+              <div>
+                <h3>Data</h3>
+                <p>Used MNIST, FashionMNIST, EMNISTDigits, USPS, and KMNIST. Inputs were converted to grayscale and resized to 28 x 28 when needed, then evaluated using per-domain, mean, minimum, and maximum accuracy.</p>
+              </div>
+              <div>
+                <h3>Approach</h3>
+                <p>Proposed center-aware dataset distillation using a frozen teacher feature space to compute global class centers and domain-to-center discrepancies. Synthetic budget was allocated by domain displacement and optimized with class, feature, reconstruction, and smoothness losses.</p>
+              </div>
+              <div>
+                <h3>Outcome / Impact</h3>
+                <p>At a fixed 10k synthetic budget, center-aware allocation improved mean accuracy from 0.5508 to 0.6044 and minimum-domain accuracy from 0.2740 to 0.3744. Adding 50k synthetic samples to MoE improved mean accuracy from 0.9409 to 0.9454.</p>
+              </div>
+              <div class="full-span">
+                <h3>My Contribution</h3>
+                <p>Responsible for inter-dataset discrepancy and s-ODD-related analysis, including distance-structure study across the five datasets and its connection to the center-aware method motivation.</p>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card tilt-card" data-project-type="others" data-aos="fade-up" data-tilt-card>
+            <div class="project-card-top">
+              <div>
+                <span class="pill-label">Others</span>
                 <h2>Toxicity Prediction Using Graph Neural Networks</h2>
               </div>
               <span class="project-time">Aug 2024 - Sep 2025</span>
             </div>
+            <figure class="project-visual">
+              <img loading="lazy" src="assets/img/projects/toxicity-gnn.jpg" alt="Graph neural network toxicity prediction visual summary">
+            </figure>
             <div class="project-card-grid">
               <div>
                 <h3>Problem</h3>
@@ -87,14 +389,17 @@
             </div>
           </article>
 
-          <article class="project-card tilt-card" data-project-type="research" data-aos="fade-up" data-tilt-card>
+          <article class="project-card tilt-card" data-project-type="others" data-aos="fade-up" data-tilt-card>
             <div class="project-card-top">
               <div>
-                <span class="pill-label alt">Research</span>
+                <span class="pill-label alt">Others</span>
                 <h2>Microscopic Image Classification of Bacteria</h2>
               </div>
               <span class="project-time">Dec 2020 - Feb 2021</span>
             </div>
+            <figure class="project-visual">
+              <img loading="lazy" src="assets/img/projects/bacteria-classification.jpg" alt="Bacteria microscopic image classification visual summary">
+            </figure>
             <div class="project-card-grid">
               <div>
                 <h3>Problem</h3>
@@ -119,14 +424,17 @@
             </div>
           </article>
 
-          <article class="project-card tilt-card" data-project-type="development" data-aos="fade-up" data-tilt-card>
+          <article class="project-card tilt-card" data-project-type="others" data-aos="fade-up" data-tilt-card>
             <div class="project-card-top">
               <div>
-                <span class="pill-label alt">Development</span>
+                <span class="pill-label">Others</span>
                 <h2>Hemodialysis Health Education App</h2>
               </div>
               <span class="project-time">Dec 2019 - Dec 2020</span>
             </div>
+            <figure class="project-visual">
+              <img loading="lazy" src="assets/img/projects/hemodialysis-app.jpg" alt="Hemodialysis health education app visual summary">
+            </figure>
             <div class="project-card-grid">
               <div>
                 <h3>Problem</h3>
